@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan oop 2</title>
+</head>
+<body>
+    <p>Nama Lengkap : <span id="namaLengkap"></span></p>
+    <p id = "dataarray"></p>
+    <script>
+        //cara mendefinisikan object
+        let orang = {
+            namaDepan : "Refi",
+            NamaBlkg : "Fahriza",
+            warnaMata : "coklat",
+            namaLengkap : function (){ //membuat function
+                return this.namaDepan + " " + this.NamaBlkg; 
+            }
+        }
+        document.getElementById("namaLengkap").innerHTML = orang.namaLengkap();
+        console.log(orang.namaLengkap());
+
+        //merubah objek menjadi array
+        let.arrayOrang = Object.values(orang);
+        document.getElementById("dataaarray").innerHTML = arrayOrang[2];
+    </script>
+    
+    
+</body>
+</html>
