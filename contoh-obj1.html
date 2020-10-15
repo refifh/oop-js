@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contoh object</title>
+</head>
+<body>
+    <p id="hasil"></p>
+    <p id="hasil2"></p>
+    <script>
+        //cara mendefinisikan object
+        let orang = {
+            namaDepan : "Refi",
+            NamaBlkg : "Fahriza",
+            warnaMata : "coklat"
+        }
+        orang.suku = "jawa"; //menambah properti
+        delete orang.warnaMata;//menghapus properti pada object
+        const hasil = document.getElementById("hasil");
+        //cara menampilkan paroperti object
+        hasil.innerHTML = "Nama Lengkap : "+orang.namaDepan + " " + orang.NamaBlkg + "<br> Warna Mata : " + orang.warnaMata + "<br> Suku : " + orang.suku;
+
+        //cara menampilkan objek
+        let pesan = " ";
+        let id;
+        for (id in orang){
+            pesan = pesan + orang[id] + " ";
+            console.log("id = "+ id);
+            // console.log("orang = ");
+        }
+        console.log(orang["namaDepan"])
+        const hasil2 = document.getElementById("hasil2");
+        hasil2.innerHTML = pesan;
+    </script>
+    
+</body>
+</html>
